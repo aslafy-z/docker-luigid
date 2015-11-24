@@ -6,6 +6,6 @@ ADD luigi.cfg /etc/luigi/luigi.cfg
 
 # Install Pip requirements
 RUN pip install --upgrade pip
-RUN pip install luigi==1.3.0
+RUN pip install luigi==2.0.0
 
 ENTRYPOINT ["luigid"]
