@@ -1,11 +1,11 @@
-FROM python:2.7-slim
-MAINTAINER Secret Sauce Partners, Inc. <dev@sspinc.io>
+FROM python:3.5-slim
+MAINTAINER Zadkiel Aslafy-Aharonian <zadkiel.aharonian@gmail.com>
 
 RUN mkdir -p /etc/luigi
 ADD luigi.cfg /etc/luigi/luigi.cfg
 
-# Install Pip requirements
+# Install requirements
 RUN pip install --upgrade pip
-RUN pip install luigi==2.0.0
+RUN pip install luigi==2.0.1
 
 ENTRYPOINT ["luigid"]
